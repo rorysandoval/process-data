@@ -59,7 +59,7 @@ process-data --help
 ## Original code
 
 ```
-process_data.py
+/docs/process_data.py
 ```
 
 ## Refactoring Summary
