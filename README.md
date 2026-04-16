@@ -1,5 +1,4 @@
-# Process Data Application
-## by RORY SANDOVAL
+# Process Data Application by RORY SANDOVAL
 
 A refactored Python command-line application for managing simple records with authentication and file persistence.
 
@@ -46,6 +45,7 @@ process-data --version
 # Help
 process-data --help
 ```
+
 
 
 ## Security Recommendations
@@ -117,13 +117,7 @@ process_data/
 ```
 
 
-## How to Run
-```
-cd process_data
-export APP_USERNAME=admin
-export APP_PASSWORD=12345
-python main.py
-```
+
 
 ## Default Credentials
 
@@ -143,9 +137,6 @@ Once logged in, you can use the following commands:
 
 ## Future Enhancements (Suggestions)
 
-- Replace str(records) with json.dump() for better data format
-- Add proper logging instead of print() statements
-- Move credentials to environment variables
 - Add unit tests using pytest
 - Support different storage backends (SQLite, JSON file, database)
 - Use a CLI framework like typer or click
@@ -161,6 +152,8 @@ Once logged in, you can use the following commands:
 
 ## How it was requested:
 
+( see details in the /docs/LOG.md file )
+
 - **Plan:** How can I refactor "process_data.py" to follow SOLID principles and remove global variables?
 - **Naming:** Suggest better names for variables 'l', 'd', and function 'fn' based on their usage.
 - **Modularization:** Can you extract the data persistence logic into a separate class?
@@ -171,7 +164,7 @@ For each task, write the explanation of what you are doing.
 Then finally, split each feature in its own file. 
 
 
-## Complete Code Generated (for reference)
+## Complete Code Generated (for reference) on first attempt.
 ```
 import datetime
 from typing import List, Dict, Any
@@ -306,9 +299,8 @@ if __name__ == "__main__":
 - File handling → uses context managers and explicit UTF-8 encoding.
 
 **Remaining recommendations for production:**
-- Use `bcrypt` or `argon2` for password hashing.
+
 - Store secrets in a vault (e.g., HashiCorp Vault, AWS Secrets Manager).
 - Add rate limiting on login attempts.
-- Implement proper logging instead of `print()`.
 - Run with least-privilege user.
 
