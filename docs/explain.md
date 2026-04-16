@@ -58,3 +58,20 @@
 - writes files without a `with` context manager
 - saves `l` as a raw Python string instead of a structured format
 - contains unused dead code
+
+---
+
+## What the Code Does (High-Level Overview)
+
+This script is a **very basic interactive command-line application** that acts as a simple in-memory "database" with insecure login protection.
+
+**Features:**
+- Username and password authentication (hardcoded)
+- After successful login, the user can:
+  - **Add** an item with a value (automatically gets an ID and timestamp)
+  - **Show** all added items
+  - **Save** the current list to a file named `data.txt`
+  - **Exit** the program
+
+Data is stored temporarily in memory using a global list and can be written to a text file.
+

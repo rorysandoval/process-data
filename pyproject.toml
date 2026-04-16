@@ -1,0 +1,16 @@
+
+[project]
+name = "process-data"
+version = "1.2.0"
+description = "Production-ready CLI tool for managing simple records with authentication and JSON persistence"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "bcrypt>=4.0.0",
+]
+
+[project.scripts]
+process-data = "process_data.main:main"
+
+[tool.ruff]
+line-length = 100
